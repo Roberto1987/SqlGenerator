@@ -1,0 +1,47 @@
+INFO:root:
+ --- Creating config manager --- 
+
+INFO:root:
+ --- Loading configs from .ini file --- 
+
+INFO:root: ---------- Exported properties ---------- 
+INFO:root:	 Localization code: 23
+INFO:root:	 Output folder: output
+INFO:root:	 Source folder: res
+INFO:root:	 CSV number of columns: 7
+INFO:root:	 filename: CsvFiles2.csv
+INFO:root:------------------------------------------ 
+INFO:root:Selected output directory:..\output
+INFO:root:Path of the written file path:..\output\Inserts20180129172316.txt
+WARNING:root:File ..\res\CsvFiles2.csv not found
+INFO:root:
+ --- Creating config manager --- 
+
+INFO:root:
+ --- Loading configs from .ini file --- 
+
+INFO:root: ---------- Exported properties ---------- 
+INFO:root:	 Localization code: 23
+INFO:root:	 Output folder: output
+INFO:root:	 Source folder: res
+INFO:root:	 CSV number of columns: 7
+INFO:root:	 filename: CsvFiles2.csv
+INFO:root:------------------------------------------ 
+INFO:root:Selected output directory:..\output
+INFO:root:Path of the written file path:..\output\Inserts20180129172316.txt
+WARNING:root:File ..\res\CsvFiles2.csv not found
+INFO:root:
+ --- Creating config manager --- 
+
+INFO:root:
+ --- Loading configs from .ini file --- 
+
+INFO:root: ---------- Exported properties ---------- 
+INFO:root:	 Localization code: 23
+INFO:root:	 Output folder: output
+INFO:root:	 Source folder: res
+INFO:root:	 CSV number of columns: 7
+INFO:root:	 filename: CsvFile2.csv
+INFO:root:------------------------------------------ 
+INFO:root:Selected output directory:..\output
+INFO:root:Path of the written file path:..\output\Inserts20180129172339.txt
