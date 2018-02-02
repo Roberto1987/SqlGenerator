@@ -17,7 +17,7 @@ logging.info("\n --- Loading configs from .ini file --- \n")
 configManager.loadConfigs()
 sourcePath = os.path.join(os.path.join(configManager.RELATIVE_PATH, configManager.resourceFolder), configManager.filename)
 
-insertStatement = 'INSERT INTO translation_competitors(sport,loca_id,long_name,english_name)'
+insertStatement =  configManager.firstInsertCmd
 VALUES = 'Values'
 END_BRACKET = ")"
 LOCA_ID = configManager.loca_id
