@@ -1,8 +1,0 @@
-INFO:root: =========================== Process started in Fri, 02 Feb 2018 17:37:19 +0000 =========================== 
-INFO:root:
- --- Creating config manager --- 
-
-INFO:root:
- --- Loading configs from .ini file --- 
-
-INFO:root:Configuration path: ..\settings\queryCreator.ini
