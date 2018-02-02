@@ -1,4 +1,3 @@
-# ---------IMPORTS-----------
 import datetime
 import os
 import time
@@ -13,7 +12,6 @@ timestamp = str(datetime.datetime.fromtimestamp(time.time()).strftime('%Y%m%d%H%
 logging.basicConfig(filename='queryCreator.log',level=logging.DEBUG)
 
 logging.info("\n --- Creating config manager --- \n")
-#---LOADING CONFIGS
 configManager = ConfigManager()
 logging.info("\n --- Loading configs from .ini file --- \n")
 configManager.loadConfigs()
