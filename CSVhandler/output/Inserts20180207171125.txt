@@ -1,4 +1,4 @@
-(sport,loca_id,long_name,english_name)Values
+INSERT INTO translation_competitors(sport,loca_id,long_name,english_name)Values
 (SOCCER,23,'پرشا لیگ','Persha Liga')
 (SOCCER,23,'لیگ پری-مچ','Liga Pari-Match')
 (SOCCER,23,'لیگ ۱ رومانی','Liga 1')

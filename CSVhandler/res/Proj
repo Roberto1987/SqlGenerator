@@ -11,3 +11,7 @@ Insert query:
 
  Main elements: Table, (fields_1,....field_k)
 
+
+ Feature:
+  1. Automatic detection of the column (through header)
+

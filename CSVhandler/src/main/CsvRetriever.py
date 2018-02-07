@@ -1,15 +1,15 @@
 import numpy as np
 import logging
 
-
-#  Input:
-#       path: path of the csv file to import
-#       cols: number of column of the csv need to be taken
-#  Csv import as text in a matrix form
 import sys
 
 
-def csvFromTextAcquisition(path, cols):
+# ---------------------------------------------------------
+#  Input:   path: path of the csv file to import
+#  Csv import as text in a matrix form
+# ---------------------------------------------------------
+def csvFromTextAcquisition(path):
+    cols = checkCsvHeader(path)
     try:
         X = np.genfromtxt(
             path, delimiter=",", encoding='utf-8',
@@ -21,3 +21,20 @@ def csvFromTextAcquisition(path, cols):
         sys.exit()
 
     return X
+
+
+# --------------------------------------------------------------
+# Determinate the number of columns of the csv from the header
+# --------------------------------------------------------------
+def checkCsvHeader(path):
+    logging.info("Checking CSV header")
+    csvFile = open(path, 'r', encoding='UTF-8-sig')
+    header = csvFile.readline()
+    fields = header.split(',')
+    if '' in fields:
+        fields[fields.index('')] = 'EMPTY'
+    header = ' - '.join(fields)
+
+    logging.info("Header size: " + str(len(fields)))
+    logging.info("Header: " + header)
+    return len(fields)
