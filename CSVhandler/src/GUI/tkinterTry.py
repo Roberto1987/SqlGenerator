@@ -1,5 +1,6 @@
 from tkinter import *
 
+
 # Here, we are creating our class, Window, and inheriting from the Frame
 # class. Frame is a class from the tkinter module. (see Lib/tkinter/__init__)
 class Window(Frame):
@@ -17,6 +18,7 @@ class Window(Frame):
 
         # create the "file" and "edit" object
         # that will be displayed on the bar menu
+
         file = Menu(menu)
         edit = Menu(menu)
         info = Menu(menu)
@@ -47,10 +49,6 @@ class Window(Frame):
     @staticmethod
     def client_exit():
         exit()
-
-
-
-
 
 
 root = Tk()

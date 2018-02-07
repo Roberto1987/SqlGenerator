@@ -15,3 +15,14 @@ Insert query:
  Feature:
   1. Automatic detection of the column (through header)
 
+USE CASES.
+
+    Use case 1: create a simple list of insert from a csv
+           1. Visualize the column available in the csv
+           2. Select the column to put into the insert
+           3. Write the name of the field for each column
+           4. Crate a file with the sql of the insert of all columns
+           5. Clean eventually the csv
+
+
+

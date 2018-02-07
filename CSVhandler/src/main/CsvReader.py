@@ -5,12 +5,12 @@ import logging
 import numpy as np
 
 from src.main.ConfigManager import ConfigManager
-from src.main.CsvRetriever import csvFromTextAcquisition
+from src.main.CsvRetriever import CsvRetriever
 
 
 class CsvReader:
 
-    #-----------------------------------------------------------
+    # -----------------------------------------------------------
     # Initializing:
     #   configManager: read all the props from queryCreator.ini
     #   timestamp : timestamp
@@ -20,9 +20,8 @@ class CsvReader:
     #   insertStatement: first INSERT's query statement
     #   outputDirectoryPath: path of the output file
     #   fileName : name of the output file
-    #------------------------------------------------------------
+    # ------------------------------------------------------------
     def __init__(self):
-
         self.timestamp = str(datetime.datetime.fromtimestamp(time.time()).strftime('%Y%m%d%H%M%S'))
         self.humanTimestamp = time.strftime("%a, %d %b %Y %H:%M:%S +0000", time.gmtime())
         self.delimitator = ' =========================== '
@@ -51,12 +50,12 @@ class CsvReader:
 
         self.outputFile = open(path, 'w', encoding='utf-8')
 
-    #-------------------------------------------------------------------------------
+    # -------------------------------------------------------------------------------
     # input: string matrix 'data'
     #
     # Creation of a batch of inserts, looping between each row of the 'data' matrix
     # writing it on a file
-    #-------------------------------------------------------------------------------
+    # -------------------------------------------------------------------------------
     def queryCreation(self, data):
         i = 0
         for i in range(0, data.shape[0]):
@@ -70,11 +69,12 @@ class CsvReader:
         logging.info(self.delimitator + str(i + 1) + ' row written. Process ended.' + self.delimitator)
         print('query writings ended')
 
-    #-----------------------------------------------------
+    # -----------------------------------------------------
     # output: A string's matrix created from the csv file
-    #-----------------------------------------------------
+    # -----------------------------------------------------
     def openCsv(self):
-        csvMatrix = csvFromTextAcquisition(self.sourcePath)
+        extractor = CsvRetriever()
+        csvMatrix = extractor.csvFromTextAcquisition(self.sourcePath)
         self.outputFile.write(self.insertStatement + self.configManager.VALUES + '\n')
         logging.info('The matrix produced from the CSV has shape ' + str(np.shape(csvMatrix)))
         return csvMatrix
@@ -83,3 +83,5 @@ class CsvReader:
 reader = CsvReader()
 csvData = reader.openCsv()
 reader.queryCreation(csvData)
+
+
