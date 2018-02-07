@@ -21,6 +21,7 @@ class CsvReader:
     #   fileName : name of the output file
 
     def __init__(self):
+
         self.timestamp = str(datetime.datetime.fromtimestamp(time.time()).strftime('%Y%m%d%H%M%S'))
         self.humanTimestamp = time.strftime("%a, %d %b %Y %H:%M:%S +0000", time.gmtime())
         self.delimitator = ' =========================== '
@@ -54,6 +55,7 @@ class CsvReader:
     # Creation of a batch of inserts, looping between each row of the 'data' matrix
     # writing it on a file
     def queryCreation(self, data):
+        i = 0
         for i in range(0, data.shape[0]):
             self.outputFile.write(
                 self.configManager.START_BRACKET + data[i, 1] + "," + self.configManager.loca_id + "," +
@@ -69,7 +71,7 @@ class CsvReader:
     # output: A string's matrix created from the csv file
     #
     def openCsv(self):
-        csvMatrix = csvFromTextAcquisition(self.sourcePath, int(self.configManager.cols));
+        csvMatrix = csvFromTextAcquisition(self.sourcePath, int(self.configManager.cols))
         self.outputFile.write(self.configManager.firstInsertCmd + self.configManager.VALUES + '\n')
         logging.info('The matrix produced from the CSV has shape ' + str(np.shape(csvMatrix)))
         return csvMatrix

@@ -14,15 +14,6 @@ class ConfigManager:
     VALUES = 'Values'
     END_BRACKET = ")"
 
-    query = ''
-    firstInsertCmd = ''
-    outputFolder = 'UNSETTED'
-    resourceFolder = 'UNSETTED'
-    loca_id = 'UNSETTED'
-    nameTable = "GenericTable"
-    cols = 0
-    filename = ''
-
     def __init__(self):
         # ----loading props parser
         config = configparser.ConfigParser()
