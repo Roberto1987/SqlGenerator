@@ -1,0 +1,13 @@
+Insert creator.
+
+Insert query:
+
+ INSERT INTO 'table' ( field_1, field_2, .... , fielf_k)VALUES
+ (V(1,1),....,V(1,k))
+ (V(2,1),....,V(2,k))
+        .
+        .
+ (V(n,1),....,V(n,k))
+
+ Main elements: Table, (fields_1,....field_k)
+
