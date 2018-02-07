@@ -1,19 +1,21 @@
-import tkinter as tk
+from tkinter import *
 
-#http://infohost.nmt.edu/tcc/help/pubs/tkinter/web/glossary.html
 
-class Application(tk.Frame):
+class Window(Frame):
 
     def __init__(self, master=None):
-        tk.Frame.__init__(self, master)
-        self.quitButton = tk.Button(self, text='Quit',command=self.quit)
-        self.grid()
-        self.createWidgets()
+        Frame.__init__(self, master)
+        self.master = master
+        self.init_window()
 
-    def createWidgets(self):
-        self.quitButton.grid()
+    def init_window(self):
+        self.master.title('GUI')
+        self.pack(fill=BOTH, expand=1)
+        quitButton = Button(self, text="Quit")
+        quitButton.place(x=0, y=0)
 
 
-app = Application()
-app.master.title('Sample application')
-app.mainloop()
+root = Tk()
+root.geometry("400x300")
+app = Window(root)
+root.mainloop()

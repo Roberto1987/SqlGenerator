@@ -7,49 +7,56 @@ import numpy as np
 from src.main.ConfigManager import ConfigManager
 from src.main.CsvRetriever import csvFromTextAcquisition
 
-# ----String constant
-print("Query writing process started")
-delimitator = ' =========================== '
-timestamp = str(datetime.datetime.fromtimestamp(time.time()).strftime('%Y%m%d%H%M%S'))
-humanTime = time.strftime("%a, %d %b %Y %H:%M:%S +0000", time.gmtime())
-logging.basicConfig(filename='queryCreator.log', level=logging.DEBUG)
-logging.info(delimitator+'Process started in '+ str(humanTime) + delimitator)
 
-logging.info("\n --- Creating config manager --- \n")
-configManager = ConfigManager()
-logging.info("\n --- Loading configs from .ini file --- \n")
-configManager.loadConfigs()
-sourcePath = os.path.join(os.path.join(configManager.RELATIVE_PATH, configManager.resourceFolder),
-                          configManager.filename)
+class CsvReader:
 
-insertStatement = "INSERT INTO " + configManager.nameTable + configManager.firstInsertCmd
+    def __init__(self):
+        self.configManager = ConfigManager()
+        self.timestamp = str(datetime.datetime.fromtimestamp(time.time()).strftime('%Y%m%d%H%M%S'))
+        self.humanTimestamp = time.strftime("%a, %d %b %Y %H:%M:%S +0000", time.gmtime())
+        self.delimitator = ' =========================== '
 
-dirName = os.path.join('..', configManager.outputFolder)
-logging.info('Selected output directory:' + dirName)
-fileName = 'Inserts' + timestamp + '.txt'
-path = os.path.join(dirName, fileName)
-logging.info('Path of the written file path:' + path)
-# print('Path of the written file path', path)
-fileInserts = open(path, 'w', encoding='utf-8')
+        logging.basicConfig(filename='queryCreator.log', level=logging.DEBUG)
+        logging.info(self.delimitator + 'Process started in ' + str(self.humanTimestamp) + self.delimitator)
+        logging.info("\n --- Initialization ---")
+        logging.info("\n --- Loading configs from .ini file --- \n")
 
-X = csvFromTextAcquisition(sourcePath, int(configManager.cols));
+        self.sourcePath = os.path.join(os.path.join(
+                         self.configManager.RELATIVE_PATH,
+                         self.configManager.resourceFolder),
+                                self.configManager.filename)
 
-xShape = np.shape(X)
-logging.info('The matrix produced from the CSV has shape ' + str(xShape))  #
+        self.insertStatement = "INSERT INTO " + self.configManager.nameTable + self.configManager.firstInsertCmd
 
-# --------Initial insert-------------
-fileInserts.write(configManager.firstInsertCmd + configManager.VALUES + '\n')
-# -----------------------------------
+        dirName = os.path.join('..', self.configManager.outputFolder)
+        logging.info('Selected output directory:' + dirName)
+        fileName = 'Inserts' + self.timestamp + '.txt'
+        path = os.path.join(dirName, fileName)
+        logging.info('Path of the written file path:' + path)
 
-for i in range(0, X.shape[0]):
-    fileInserts.write(
-        configManager.START_BRACKET +
-        X[i, 1] + "," + configManager.loca_id + "," +
-        configManager.APEX + X[i, 6] + configManager.APEX + "," +
-        configManager.APEX + X[i, 3] + configManager.APEX +
-        configManager.END_BRACKET + '\n'
-    )
+        self.fileInserts = open(path, 'w', encoding='utf-8')
+
+    def queryCreation(self, data):
+        for i in range(0, data.shape[0]):
+            self.fileInserts.write(
+                self.configManager.START_BRACKET + data[i, 1] + "," + self.configManager.loca_id + "," +
+                self.configManager.APEX + data[i, 6] + self.configManager.APEX + "," +
+                self.configManager.APEX + data[i, 3] + self.configManager.APEX +
+                self.configManager.END_BRACKET + '\n'
+            )
+
+        logging.info(self.delimitator + str(i + 1) + ' rows processed. Process ended.' + self.delimitator)
+        print('query writings ended')
+
+    def openCsv(self):
+        X = csvFromTextAcquisition(self.sourcePath, int(self.configManager.cols));
+        xShape = np.shape(X)
+        logging.info('The matrix produced from the CSV has shape ' + str(xShape))  #
+
+        self.fileInserts.write(self.configManager.firstInsertCmd + self.configManager.VALUES + '\n')
+        return X
 
 
-logging.info(delimitator+  str(i+1) + ' rows processed. Process ended.' +delimitator)
-print('query writings ended')
+reader = CsvReader()
+csvData = reader.openCsv()
+reader.queryCreation(csvData)

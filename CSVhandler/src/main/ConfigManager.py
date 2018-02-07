@@ -5,14 +5,10 @@ import os
 import logging
 
 
-
-
 class ConfigManager:
-
     RELATIVE_PATH = '..'
     SETTINGS_FOLDER = 'settings'
     PROPERTIES_FILE_NAME = 'queryCreator.ini'
-
     START_BRACKET = "("
     APEX = '\''
     VALUES = 'Values'
@@ -27,17 +23,17 @@ class ConfigManager:
     cols = 0
     filename = ''
 
-    def loadConfigs(self):
+    def __init__(self):
         # ----loading props parser
         config = configparser.ConfigParser()
         # ----building props path
         configPath = os.path.join(os.path.join(self.RELATIVE_PATH, self.SETTINGS_FOLDER), self.PROPERTIES_FILE_NAME)
-        logging.info('Configuration path: '+configPath)
-        # ----reading props
+        logging.info('Configuration path: ' + configPath)
 
-        # ----extracting the properties
+        # ----reading props
         config.read(configPath)
 
+        # ----extracting the properties
         self.query = config['QuerySettings']['query.insert']
         self.nameTable = config['QuerySettings']['query.nameTable']
         self.firstInsertCmd = config['QuerySettings']['query.insert.firstInsert']
