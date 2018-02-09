@@ -32,9 +32,11 @@ class CsvReader:
         logging.info("\n --- Loading configs from .ini file --- \n")
 
         self.configManager = ConfigManager()
+        self.configManager.setRelativePath('..')
+        self.configManager.extractProperties()
 
         self.sourcePath = os.path.join(os.path.join(
-            self.configManager.RELATIVE_PATH,
+            self.configManager.relative_path,
             self.configManager.resourceFolder),
             self.configManager.filename
         )

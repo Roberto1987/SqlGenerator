@@ -1,23 +1,20 @@
 from tkinter import *
 
-
 # Here, we are creating our class, Window, and inheriting from the Frame
 # class. Frame is a class from the tkinter module. (see Lib/tkinter/__init__)
+import os
+
+from src.main.ConfigManager import ConfigManager
+from src.main.CsvRetriever import CsvRetriever
+
+
 class Window(Frame):
 
     def __init__(self, master=None):
-        # parameters that you want to send through the Frame class
         Frame.__init__(self, master)
-
-        # reference to the master widget, which is the tk window
         self.master = master
-
-        # creating a menu instance
         menu = Menu(self.master)
         self.master.config(menu=menu)
-
-        # create the "file" and "edit" object
-        # that will be displayed on the bar menu
 
         file = Menu(menu)
         edit = Menu(menu)
@@ -45,6 +42,35 @@ class Window(Frame):
         # creating and placing a button instance
         quitButton = Button(self, text="Quit", command=self.client_exit)
         quitButton.place(x=0, y=0)
+        csvRetriever = CsvRetriever()
+
+        configManager = ConfigManager()
+        configManager.setRelativePath('../..')
+        configManager.extractProperties()
+        sourcePath = os.path.join(os.path.join(
+            configManager.relative_path,
+            configManager.resourceFolder),
+            configManager.filename
+        )
+        print(sourcePath)
+
+        self.tableFields = csvRetriever.getHeaderValues(sourcePath)  # ['mockCol1', 'mockCol2', 'mockCol3']
+        self.displayfields(self.tableFields)
+
+    def displayfields(self, tablefields):
+        numberOfFields = len(self.tableFields)
+        fieldLabels = []
+
+        for i in range(numberOfFields):
+            fieldLabels.append(Label(text=self.tableFields[i]))
+
+        print('fieldLabels size ' + str(len(fieldLabels)))
+        offset = 50
+        for i in range(numberOfFields):
+            print('element number' + str(i))
+            fieldLabels[i].place(x=offset, y=0)
+            fieldLabels[i].pack()
+            print("Label width " + str(i) + ',' + str(Label(fieldLabels[i]).winfo_width()))
 
     @staticmethod
     def client_exit():

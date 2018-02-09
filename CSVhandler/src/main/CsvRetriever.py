@@ -44,3 +44,16 @@ class CsvRetriever:
             sys.exit()
 
         return X
+
+    def getHeaderValues(self,path):
+        logging.info("Extracting CSV header")
+        csvFile = open(path, 'r', encoding='UTF-8-sig')
+        header = csvFile.readline()
+        csvFile.close()
+        fields = header.split(',')
+
+        if '' in fields:
+            fields[fields.index('')] = 'EMPTY'
+        return fields
+
+

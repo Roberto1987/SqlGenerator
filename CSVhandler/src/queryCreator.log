@@ -1,4 +1,13 @@
-INFO:root: =========================== Process started in Wed, 07 Feb 2018 17:20:17 +0000 =========================== 
+INFO:root: =========================== Process started in Fri, 09 Feb 2018 15:01:42 +0000 =========================== 
+INFO:root:
+ --- Initialization ---
+INFO:root:
+ --- Loading configs from .ini file --- 
+
+INFO:root:Selected output directory:..\
+INFO:root:Path of the written file path:..\Inserts20180209150142.txt
+INFO:root:Checking CSV header
+INFO:root: =========================== Process started in Fri, 09 Feb 2018 15:01:54 +0000 =========================== 
 INFO:root:
  --- Initialization ---
 INFO:root:
@@ -15,14 +24,14 @@ INFO:root:	 Source folder: res
 INFO:root:	 filename: CsvFile2.csv
 INFO:root:------------------------------------------ 
 INFO:root:Selected output directory:..\output
-INFO:root:Path of the written file path:..\output\Inserts20180207172017.txt
+INFO:root:Path of the written file path:..\output\Inserts20180209150154.txt
 INFO:root:Checking CSV header
 INFO:root:Header size: 7
 INFO:root:Header: Sport  - EMPTY - Sport Persian - Competition - Country -  Country Persian - Competition Persian
 
 INFO:root:The matrix produced from the CSV has shape (515, 7)
 INFO:root: =========================== 515 row written. Process ended. =========================== 
-INFO:root: =========================== Process started in Wed, 07 Feb 2018 17:25:44 +0000 =========================== 
+INFO:root: =========================== Process started in Fri, 09 Feb 2018 15:02:02 +0000 =========================== 
 INFO:root:
  --- Initialization ---
 INFO:root:
@@ -39,235 +48,7 @@ INFO:root:	 Source folder: res
 INFO:root:	 filename: CsvFile2.csv
 INFO:root:------------------------------------------ 
 INFO:root:Selected output directory:..\output
-INFO:root:Path of the written file path:..\output\Inserts20180207172544.txt
-INFO:root:Checking CSV header
-INFO:root:Header size: 7
-INFO:root:Header: Sport  - EMPTY - Sport Persian - Competition - Country -  Country Persian - Competition Persian
-
-INFO:root:The matrix produced from the CSV has shape (515, 7)
-INFO:root: =========================== 515 row written. Process ended. =========================== 
-INFO:root: =========================== Process started in Wed, 07 Feb 2018 17:46:39 +0000 =========================== 
-INFO:root:
- --- Initialization ---
-INFO:root:
- --- Loading configs from .ini file --- 
-
-INFO:root:Configuration path: ..\settings\queryCreator.ini
-INFO:root: ---------- Exported properties ---------- 
-INFO:root:	 Query type: INSERT INTO
-INFO:root:	 Table name: translation_competitors
-INFO:root:	 First Insert code: (sport,loca_id,long_name,english_name)
-INFO:root:	 Localization code: 23
-INFO:root:	 Output folder: output
-INFO:root:	 Source folder: res
-INFO:root:	 filename: CsvFile2.csv
-INFO:root:------------------------------------------ 
-INFO:root:Selected output directory:..\output
-INFO:root:Path of the written file path:..\output\Inserts20180207174639.txt
-INFO:root: =========================== Process started in Wed, 07 Feb 2018 17:46:39 +0000 =========================== 
-INFO:root:
- --- Initialization ---
-INFO:root:
- --- Loading configs from .ini file --- 
-
-INFO:root:Configuration path: ..\settings\queryCreator.ini
-INFO:root: ---------- Exported properties ---------- 
-INFO:root:	 Query type: INSERT INTO
-INFO:root:	 Table name: translation_competitors
-INFO:root:	 First Insert code: (sport,loca_id,long_name,english_name)
-INFO:root:	 Localization code: 23
-INFO:root:	 Output folder: output
-INFO:root:	 Source folder: res
-INFO:root:	 filename: CsvFile2.csv
-INFO:root:------------------------------------------ 
-INFO:root:Selected output directory:..\output
-INFO:root:Path of the written file path:..\output\Inserts20180207174639.txt
-INFO:root: =========================== Process started in Wed, 07 Feb 2018 17:46:58 +0000 =========================== 
-INFO:root:
- --- Initialization ---
-INFO:root:
- --- Loading configs from .ini file --- 
-
-INFO:root:Configuration path: ..\settings\queryCreator.ini
-INFO:root: ---------- Exported properties ---------- 
-INFO:root:	 Query type: INSERT INTO
-INFO:root:	 Table name: translation_competitors
-INFO:root:	 First Insert code: (sport,loca_id,long_name,english_name)
-INFO:root:	 Localization code: 23
-INFO:root:	 Output folder: output
-INFO:root:	 Source folder: res
-INFO:root:	 filename: CsvFile2.csv
-INFO:root:------------------------------------------ 
-INFO:root:Selected output directory:..\output
-INFO:root:Path of the written file path:..\output\Inserts20180207174658.txt
-INFO:root: =========================== Process started in Wed, 07 Feb 2018 17:46:58 +0000 =========================== 
-INFO:root:
- --- Initialization ---
-INFO:root:
- --- Loading configs from .ini file --- 
-
-INFO:root:Configuration path: ..\settings\queryCreator.ini
-INFO:root: ---------- Exported properties ---------- 
-INFO:root:	 Query type: INSERT INTO
-INFO:root:	 Table name: translation_competitors
-INFO:root:	 First Insert code: (sport,loca_id,long_name,english_name)
-INFO:root:	 Localization code: 23
-INFO:root:	 Output folder: output
-INFO:root:	 Source folder: res
-INFO:root:	 filename: CsvFile2.csv
-INFO:root:------------------------------------------ 
-INFO:root:Selected output directory:..\output
-INFO:root:Path of the written file path:..\output\Inserts20180207174658.txt
-INFO:root: =========================== Process started in Wed, 07 Feb 2018 17:48:18 +0000 =========================== 
-INFO:root:
- --- Initialization ---
-INFO:root:
- --- Loading configs from .ini file --- 
-
-INFO:root:Configuration path: ..\settings\queryCreator.ini
-INFO:root: ---------- Exported properties ---------- 
-INFO:root:	 Query type: INSERT INTO
-INFO:root:	 Table name: translation_competitors
-INFO:root:	 First Insert code: (sport,loca_id,long_name,english_name)
-INFO:root:	 Localization code: 23
-INFO:root:	 Output folder: output
-INFO:root:	 Source folder: res
-INFO:root:	 filename: CsvFile2.csv
-INFO:root:------------------------------------------ 
-INFO:root:Selected output directory:..\output
-INFO:root:Path of the written file path:..\output\Inserts20180207174818.txt
-INFO:root: =========================== Process started in Wed, 07 Feb 2018 17:50:11 +0000 =========================== 
-INFO:root:
- --- Initialization ---
-INFO:root:
- --- Loading configs from .ini file --- 
-
-INFO:root:Configuration path: ..\settings\queryCreator.ini
-INFO:root: ---------- Exported properties ---------- 
-INFO:root:	 Query type: INSERT INTO
-INFO:root:	 Table name: translation_competitors
-INFO:root:	 First Insert code: (sport,loca_id,long_name,english_name)
-INFO:root:	 Localization code: 23
-INFO:root:	 Output folder: output
-INFO:root:	 Source folder: res
-INFO:root:	 filename: CsvFile2.csv
-INFO:root:------------------------------------------ 
-INFO:root:Selected output directory:..\output
-INFO:root:Path of the written file path:..\output\Inserts20180207175011.txt
-INFO:root: =========================== Process started in Wed, 07 Feb 2018 17:51:59 +0000 =========================== 
-INFO:root:
- --- Initialization ---
-INFO:root:
- --- Loading configs from .ini file --- 
-
-INFO:root:Configuration path: ..\settings\queryCreator.ini
-INFO:root: ---------- Exported properties ---------- 
-INFO:root:	 Query type: INSERT INTO
-INFO:root:	 Table name: translation_competitors
-INFO:root:	 First Insert code: (sport,loca_id,long_name,english_name)
-INFO:root:	 Localization code: 23
-INFO:root:	 Output folder: output
-INFO:root:	 Source folder: res
-INFO:root:	 filename: CsvFile2.csv
-INFO:root:------------------------------------------ 
-INFO:root:Selected output directory:..\output
-INFO:root:Path of the written file path:..\output\Inserts20180207175159.txt
-INFO:root: =========================== Process started in Wed, 07 Feb 2018 17:52:06 +0000 =========================== 
-INFO:root:
- --- Initialization ---
-INFO:root:
- --- Loading configs from .ini file --- 
-
-INFO:root:Configuration path: ..\settings\queryCreator.ini
-INFO:root: ---------- Exported properties ---------- 
-INFO:root:	 Query type: INSERT INTO
-INFO:root:	 Table name: translation_competitors
-INFO:root:	 First Insert code: (sport,loca_id,long_name,english_name)
-INFO:root:	 Localization code: 23
-INFO:root:	 Output folder: output
-INFO:root:	 Source folder: res
-INFO:root:	 filename: CsvFile2.csv
-INFO:root:------------------------------------------ 
-INFO:root:Selected output directory:..\output
-INFO:root:Path of the written file path:..\output\Inserts20180207175206.txt
-INFO:root: =========================== Process started in Wed, 07 Feb 2018 17:52:58 +0000 =========================== 
-INFO:root:
- --- Initialization ---
-INFO:root:
- --- Loading configs from .ini file --- 
-
-INFO:root:Configuration path: ..\settings\queryCreator.ini
-INFO:root: ---------- Exported properties ---------- 
-INFO:root:	 Query type: INSERT INTO
-INFO:root:	 Table name: translation_competitors
-INFO:root:	 First Insert code: (sport,loca_id,long_name,english_name)
-INFO:root:	 Localization code: 23
-INFO:root:	 Output folder: output
-INFO:root:	 Source folder: res
-INFO:root:	 filename: CsvFile2.csv
-INFO:root:------------------------------------------ 
-INFO:root:Selected output directory:..\output
-INFO:root:Path of the written file path:..\output\Inserts20180207175258.txt
-INFO:root: =========================== Process started in Wed, 07 Feb 2018 17:54:54 +0000 =========================== 
-INFO:root:
- --- Initialization ---
-INFO:root:
- --- Loading configs from .ini file --- 
-
-INFO:root:Configuration path: ..\settings\queryCreator.ini
-INFO:root: ---------- Exported properties ---------- 
-INFO:root:	 Query type: INSERT INTO
-INFO:root:	 Table name: translation_competitors
-INFO:root:	 First Insert code: (sport,loca_id,long_name,english_name)
-INFO:root:	 Localization code: 23
-INFO:root:	 Output folder: output
-INFO:root:	 Source folder: res
-INFO:root:	 filename: CsvFile2.csv
-INFO:root:------------------------------------------ 
-INFO:root:Selected output directory:..\output
-INFO:root:Path of the written file path:..\output\Inserts20180207175454.txt
-INFO:root: =========================== Process started in Wed, 07 Feb 2018 17:55:14 +0000 =========================== 
-INFO:root:
- --- Initialization ---
-INFO:root:
- --- Loading configs from .ini file --- 
-
-INFO:root:Configuration path: ..\settings\queryCreator.ini
-INFO:root: ---------- Exported properties ---------- 
-INFO:root:	 Query type: INSERT INTO
-INFO:root:	 Table name: translation_competitors
-INFO:root:	 First Insert code: (sport,loca_id,long_name,english_name)
-INFO:root:	 Localization code: 23
-INFO:root:	 Output folder: output
-INFO:root:	 Source folder: res
-INFO:root:	 filename: CsvFile2.csv
-INFO:root:------------------------------------------ 
-INFO:root:Selected output directory:..\output
-INFO:root:Path of the written file path:..\output\Inserts20180207175514.txt
-INFO:root:Checking CSV header
-INFO:root:Header size: 7
-INFO:root:Header: Sport  - EMPTY - Sport Persian - Competition - Country -  Country Persian - Competition Persian
-
-INFO:root:The matrix produced from the CSV has shape (515, 7)
-INFO:root: =========================== 515 row written. Process ended. =========================== 
-INFO:root: =========================== Process started in Wed, 07 Feb 2018 17:56:24 +0000 =========================== 
-INFO:root:
- --- Initialization ---
-INFO:root:
- --- Loading configs from .ini file --- 
-
-INFO:root:Configuration path: ..\settings\queryCreator.ini
-INFO:root: ---------- Exported properties ---------- 
-INFO:root:	 Query type: INSERT INTO
-INFO:root:	 Table name: translation_competitors
-INFO:root:	 First Insert code: (sport,loca_id,long_name,english_name)
-INFO:root:	 Localization code: 23
-INFO:root:	 Output folder: output
-INFO:root:	 Source folder: res
-INFO:root:	 filename: CsvFile2.csv
-INFO:root:------------------------------------------ 
-INFO:root:Selected output directory:..\output
-INFO:root:Path of the written file path:..\output\Inserts20180207175624.txt
+INFO:root:Path of the written file path:..\output\Inserts20180209150202.txt
 INFO:root:Checking CSV header
 INFO:root:Header size: 7
 INFO:root:Header: Sport  - EMPTY - Sport Persian - Competition - Country -  Country Persian - Competition Persian
