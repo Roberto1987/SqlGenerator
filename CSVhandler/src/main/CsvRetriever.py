@@ -54,6 +54,8 @@ class CsvRetriever:
 
         if '' in fields:
             fields[fields.index('')] = 'EMPTY'
+        for s in fields:
+            s = s.strip()
         return fields
 
 

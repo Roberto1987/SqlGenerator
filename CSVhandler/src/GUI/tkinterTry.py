@@ -12,6 +12,7 @@ class Window(Frame):
 
     def __init__(self, master=None):
         Frame.__init__(self, master)
+
         self.master = master
         menu = Menu(self.master)
         self.master.config(menu=menu)
@@ -39,9 +40,6 @@ class Window(Frame):
         # allowing the widget to take the full space of the root window
         self.pack(fill=BOTH, expand=1)
 
-        # creating and placing a button instance
-        quitButton = Button(self, text="Quit", command=self.client_exit)
-        quitButton.place(x=0, y=0)
         csvRetriever = CsvRetriever()
 
         configManager = ConfigManager()
@@ -60,17 +58,13 @@ class Window(Frame):
     def displayfields(self, tablefields):
         numberOfFields = len(self.tableFields)
         fieldLabels = []
-
+        greyDot = PhotoImage('../../res/gdot.png')
         for i in range(numberOfFields):
-            fieldLabels.append(Label(text=self.tableFields[i]))
+            fieldLabels.append(Label(text=self.tableFields[i], justify='left', padx='50'))
 
         print('fieldLabels size ' + str(len(fieldLabels)))
-        offset = 50
         for i in range(numberOfFields):
-            print('element number' + str(i))
-            fieldLabels[i].place(x=offset, y=0)
-            fieldLabels[i].pack()
-            print("Label width " + str(i) + ',' + str(Label(fieldLabels[i]).winfo_width()))
+            fieldLabels[i].pack(side='top')
 
     @staticmethod
     def client_exit():

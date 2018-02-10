@@ -2,38 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b9588801-eb55-41a6-ab35-577f27e4bdfa" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/Inserts20180209150142.txt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/venv2/Lib/site-packages/decorator-4.2.1.dist-info/DESCRIPTION.rst" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/venv2/Lib/site-packages/decorator-4.2.1.dist-info/INSTALLER" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/venv2/Lib/site-packages/decorator-4.2.1.dist-info/METADATA" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/venv2/Lib/site-packages/decorator-4.2.1.dist-info/RECORD" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/venv2/Lib/site-packages/decorator-4.2.1.dist-info/WHEEL" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/venv2/Lib/site-packages/decorator-4.2.1.dist-info/metadata.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/venv2/Lib/site-packages/decorator-4.2.1.dist-info/pbr.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/venv2/Lib/site-packages/decorator-4.2.1.dist-info/top_level.txt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/venv2/Lib/site-packages/decorator.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/venv2/Lib/site-packages/public-0.0.65.dist-info/DESCRIPTION.rst" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/venv2/Lib/site-packages/public-0.0.65.dist-info/INSTALLER" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/venv2/Lib/site-packages/public-0.0.65.dist-info/METADATA" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/venv2/Lib/site-packages/public-0.0.65.dist-info/RECORD" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/venv2/Lib/site-packages/public-0.0.65.dist-info/WHEEL" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/venv2/Lib/site-packages/public-0.0.65.dist-info/metadata.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/venv2/Lib/site-packages/public-0.0.65.dist-info/top_level.txt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/venv2/Lib/site-packages/public/__init__.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/venv2/Lib/site-packages/self-0.0.27.dist-info/DESCRIPTION.rst" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/venv2/Lib/site-packages/self-0.0.27.dist-info/INSTALLER" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/venv2/Lib/site-packages/self-0.0.27.dist-info/METADATA" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/venv2/Lib/site-packages/self-0.0.27.dist-info/RECORD" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/venv2/Lib/site-packages/self-0.0.27.dist-info/WHEEL" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/venv2/Lib/site-packages/self-0.0.27.dist-info/metadata.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/venv2/Lib/site-packages/self-0.0.27.dist-info/top_level.txt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/venv2/Lib/site-packages/self/__init__.py" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/res/gdot.png" />
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/rtesta.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/rtesta.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/output/Inserts20180207175624.txt" afterPath="$PROJECT_DIR$/output/Inserts20180209150202.txt" />
+      <change beforePath="$PROJECT_DIR$/output/Inserts20180209150202.txt" afterPath="" />
       <change beforePath="$PROJECT_DIR$/src/GUI/tkinterTry.py" afterPath="$PROJECT_DIR$/src/GUI/tkinterTry.py" />
-      <change beforePath="$PROJECT_DIR$/src/main/ConfigManager.py" afterPath="$PROJECT_DIR$/src/main/ConfigManager.py" />
-      <change beforePath="$PROJECT_DIR$/src/main/CsvReader.py" afterPath="$PROJECT_DIR$/src/main/CsvReader.py" />
       <change beforePath="$PROJECT_DIR$/src/main/CsvRetriever.py" afterPath="$PROJECT_DIR$/src/main/CsvRetriever.py" />
       <change beforePath="$PROJECT_DIR$/src/queryCreator.log" afterPath="$PROJECT_DIR$/src/queryCreator.log" />
     </list>
@@ -59,7 +32,7 @@
       <file leaf-file-name="Proj" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/res/Proj">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="218">
+            <state relative-caret-position="500">
               <caret line="20" column="55" lean-forward="false" selection-start-line="20" selection-start-column="55" selection-end-line="20" selection-end-column="55" />
               <folding />
             </state>
@@ -69,7 +42,7 @@
       <file leaf-file-name="CsvReader.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/CsvReader.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="275">
+            <state relative-caret-position="700">
               <caret line="35" column="46" lean-forward="false" selection-start-line="35" selection-start-column="46" selection-end-line="35" selection-end-column="46" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
@@ -90,8 +63,8 @@
       <file leaf-file-name="CsvRetriever.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/CsvRetriever.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1225">
-              <caret line="58" column="0" lean-forward="false" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
+            <state relative-caret-position="1350">
+              <caret line="57" column="24" lean-forward="false" selection-start-line="57" selection-start-column="24" selection-end-line="57" selection-end-column="24" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -102,8 +75,8 @@
       <file leaf-file-name="tkinterTry.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/GUI/tkinterTry.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="211">
-              <caret line="49" column="0" lean-forward="false" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+            <state relative-caret-position="350">
+              <caret line="62" column="37" lean-forward="false" selection-start-line="62" selection-start-column="37" selection-end-line="62" selection-end-column="37" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
               </folding>
@@ -111,11 +84,21 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36-32/Lib/tkinter/__init__.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="36875">
+              <caret line="1478" column="0" lean-forward="false" selection-start-line="1478" selection-start-column="0" selection-end-line="1478" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="ConfigManager.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/ConfigManager.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="86">
-              <caret line="23" column="25" lean-forward="true" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="25" />
+            <state relative-caret-position="450">
+              <caret line="23" column="25" lean-forward="false" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -163,10 +146,10 @@
         <option value="$PROJECT_DIR$/res/Proj" />
         <option value="$PROJECT_DIR$/src/GUI/calc.py" />
         <option value="$PROJECT_DIR$/src/queryCreator.log" />
-        <option value="$PROJECT_DIR$/src/main/CsvRetriever.py" />
         <option value="$PROJECT_DIR$/src/main/ConfigManager.py" />
-        <option value="$PROJECT_DIR$/src/GUI/tkinterTry.py" />
         <option value="$PROJECT_DIR$/src/main/CsvReader.py" />
+        <option value="$PROJECT_DIR$/src/main/CsvRetriever.py" />
+        <option value="$PROJECT_DIR$/src/GUI/tkinterTry.py" />
       </list>
     </option>
   </component>
@@ -211,19 +194,12 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="CSVhandler" type="b2602c69:ProjectViewProjectNode" />
               <item name="CSVhandler" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CSVhandler" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CSVhandler" type="462c0819:PsiDirectoryNode" />
-              <item name="output" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="CSVhandler" type="b2602c69:ProjectViewProjectNode" />
@@ -261,6 +237,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -268,16 +246,16 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\LocalPersonalGitRepos\pythonSqlGenerator\CSVhandler\res" />
+      <recent name="C:\Users\rtesta\PycharmProjects\CSVhandler\main" />
+      <recent name="C:\Users\rtesta\PycharmProjects\CSVhandler" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\LocalPersonalGitRepos\pythonSqlGenerator\CSVhandler\src\GUI" />
       <recent name="C:\LocalPersonalGitRepos\pythonSqlGenerator\CSVhandler" />
       <recent name="C:\LocalPersonalGitRepos\pythonSqlGenerator\CSVhandler\src" />
       <recent name="C:\Users\rtesta\PycharmProjects\CSVhandler\settings" />
-      <recent name="C:\Users\rtesta\PycharmProjects\CSVhandler" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\LocalPersonalGitRepos\pythonSqlGenerator\CSVhandler\res" />
-      <recent name="C:\Users\rtesta\PycharmProjects\CSVhandler\main" />
       <recent name="C:\Users\rtesta\PycharmProjects\CSVhandler" />
     </key>
   </component>
@@ -293,7 +271,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.CsvReader">
+  <component name="RunManager" selected="Python.tkinterTry">
     <configuration name="CsvReader (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -374,8 +352,8 @@
     </list>
     <recent_temporary>
       <list size="4">
-        <item index="0" class="java.lang.String" itemvalue="Python.CsvReader" />
-        <item index="1" class="java.lang.String" itemvalue="Python.tkinterTry" />
+        <item index="0" class="java.lang.String" itemvalue="Python.tkinterTry" />
+        <item index="1" class="java.lang.String" itemvalue="Python.CsvReader" />
         <item index="2" class="java.lang.String" itemvalue="Python.calc" />
         <item index="3" class="java.lang.String" itemvalue="Python.CsvReader (1)" />
       </list>
@@ -514,26 +492,25 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="1942" height="1102" extended-state="6" />
-    <editor active="true" />
     <layout>
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15945946" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32998884" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32941177" sideWeight="0.50416666" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32887402" sideWeight="0.49583334" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32887402" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32887402" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15675676" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="R Packages" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="R Graphics" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32941177" sideWeight="0.50416666" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32887402" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32887402" sideWeight="0.49583334" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32887402" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -641,14 +618,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/output/Inserts20180207110154.txt" />
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36-32/Lib/tkinter/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="1482" column="0" lean-forward="false" selection-start-line="1482" selection-start-column="0" selection-end-line="1482" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/output/Inserts20180207110511.txt" />
     <entry file="file://$PROJECT_DIR$/venv2/Lib/encodings/cp1252.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -677,7 +646,7 @@
     <entry file="file://$PROJECT_DIR$/src/GUI/calc.py" />
     <entry file="file://$PROJECT_DIR$/res/Proj">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
+        <state relative-caret-position="500">
           <caret line="20" column="55" lean-forward="false" selection-start-line="20" selection-start-column="55" selection-end-line="20" selection-end-column="55" />
           <folding />
         </state>
@@ -695,24 +664,24 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
           <caret line="958" column="0" lean-forward="false" selection-start-line="958" selection-start-column="0" selection-end-line="958" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/output/Inserts20180209150202.txt" />
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36-32/Lib/tkinter/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36875">
+          <caret line="1478" column="0" lean-forward="false" selection-start-line="1478" selection-start-column="0" selection-end-line="1478" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/ConfigManager.py">
+    <entry file="file://$PROJECT_DIR$/src/main/CsvReader.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="86">
-          <caret line="23" column="25" lean-forward="true" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/CsvRetriever.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1225">
-          <caret line="58" column="0" lean-forward="false" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
+        <state relative-caret-position="700">
+          <caret line="35" column="46" lean-forward="false" selection-start-line="35" selection-start-column="46" selection-end-line="35" selection-end-column="46" />
           <folding>
-            <element signature="e#0#18#0" expanded="true" />
+            <element signature="e#0#15#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -724,28 +693,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/output/Inserts20180209150202.txt">
+    <entry file="file://$PROJECT_DIR$/src/main/CsvRetriever.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="1350">
+          <caret line="57" column="24" lean-forward="false" selection-start-line="57" selection-start-column="24" selection-end-line="57" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/CsvReader.py">
+    <entry file="file://$PROJECT_DIR$/src/main/ConfigManager.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="35" column="46" lean-forward="false" selection-start-line="35" selection-start-column="46" selection-end-line="35" selection-end-column="46" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="450">
+          <caret line="23" column="25" lean-forward="false" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="25" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/GUI/tkinterTry.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="49" column="0" lean-forward="false" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+        <state relative-caret-position="350">
+          <caret line="62" column="37" lean-forward="false" selection-start-line="62" selection-start-column="37" selection-end-line="62" selection-end-column="37" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
           </folding>

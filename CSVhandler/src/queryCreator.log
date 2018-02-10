@@ -55,3 +55,27 @@ INFO:root:Header: Sport  - EMPTY - Sport Persian - Competition - Country -  Coun
 
 INFO:root:The matrix produced from the CSV has shape (515, 7)
 INFO:root: =========================== 515 row written. Process ended. =========================== 
+INFO:root: =========================== Process started in Fri, 09 Feb 2018 15:14:17 +0000 =========================== 
+INFO:root:
+ --- Initialization ---
+INFO:root:
+ --- Loading configs from .ini file --- 
+
+INFO:root:Configuration path: ..\settings\queryCreator.ini
+INFO:root: ---------- Exported properties ---------- 
+INFO:root:	 Query type: INSERT INTO
+INFO:root:	 Table name: translation_competitors
+INFO:root:	 First Insert code: (sport,loca_id,long_name,english_name)
+INFO:root:	 Localization code: 23
+INFO:root:	 Output folder: output
+INFO:root:	 Source folder: res
+INFO:root:	 filename: CsvFile2.csv
+INFO:root:------------------------------------------ 
+INFO:root:Selected output directory:..\output
+INFO:root:Path of the written file path:..\output\Inserts20180209151417.txt
+INFO:root:Checking CSV header
+INFO:root:Header size: 7
+INFO:root:Header: Sport  - EMPTY - Sport Persian - Competition - Country -  Country Persian - Competition Persian
+
+INFO:root:The matrix produced from the CSV has shape (515, 7)
+INFO:root: =========================== 515 row written. Process ended. =========================== 
