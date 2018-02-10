@@ -38,13 +38,14 @@ class Window(Frame):
         self.master.title('SQL generator')
 
         # allowing the widget to take the full space of the root window
-        self.pack(fill=BOTH, expand=1)
+        # self.pack(fill=BOTH, expand=1)
 
         csvRetriever = CsvRetriever()
 
         configManager = ConfigManager()
         configManager.setRelativePath('../..')
         configManager.extractProperties()
+
         sourcePath = os.path.join(os.path.join(
             configManager.relative_path,
             configManager.resourceFolder),
@@ -52,19 +53,20 @@ class Window(Frame):
         )
         print(sourcePath)
 
-        self.tableFields = csvRetriever.getHeaderValues(sourcePath)  # ['mockCol1', 'mockCol2', 'mockCol3']
-        self.displayfields(self.tableFields)
+        self.tableFields = csvRetriever.getHeaderValues(sourcePath)
+        self.displayfields()
 
-    def displayfields(self, tablefields):
+    def displayfields(self):
         numberOfFields = len(self.tableFields)
         fieldLabels = []
-        greyDot = PhotoImage('../../res/gdot.png')
+        # greyDot = PhotoImage('../../res/gdot.png')
         for i in range(numberOfFields):
-            fieldLabels.append(Label(text=self.tableFields[i], justify='left', padx='50'))
+            fieldLabels.append(Label(text=self.tableFields[i], justify='left', padx='5'))
 
         print('fieldLabels size ' + str(len(fieldLabels)))
+
         for i in range(numberOfFields):
-            fieldLabels[i].pack(side='top')
+            fieldLabels[i].grid(row=0, column=i)
 
     @staticmethod
     def client_exit():
@@ -74,5 +76,6 @@ class Window(Frame):
 root = Tk()
 # size of the window
 root.geometry("400x300")
+root.pack_slaves()
 app = Window(root)
 root.mainloop()
