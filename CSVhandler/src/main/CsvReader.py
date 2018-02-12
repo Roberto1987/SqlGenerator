@@ -25,14 +25,21 @@ class CsvReader:
         self.timestamp = str(datetime.datetime.fromtimestamp(time.time()).strftime('%Y%m%d%H%M%S'))
         self.humanTimestamp = time.strftime("%a, %d %b %Y %H:%M:%S +0000", time.gmtime())
         self.delimitator = ' =========================== '
-
+        self.insertStatement = ''
+        self.sourcePath = ''
+        self.fileName = ''
+        self.outputFile = ''
+        self.csvRetriever = CsvRetriever()
         logging.basicConfig(filename='queryCreator.log', level=logging.DEBUG)
         logging.info(self.delimitator + 'Process started in ' + str(self.humanTimestamp) + self.delimitator)
+
         logging.info("\n --- Initialization ---")
+        self.configManager = ConfigManager()
+
+    def initialize(self):
         logging.info("\n --- Loading configs from .ini file --- \n")
 
-        self.configManager = ConfigManager()
-        self.configManager.setRelativePath('..')
+        #self.configManager.setRelativePath('..\..')
         self.configManager.extractProperties()
 
         self.sourcePath = os.path.join(os.path.join(
@@ -43,7 +50,7 @@ class CsvReader:
 
         self.insertStatement = "INSERT INTO " + self.configManager.nameTable + self.configManager.firstInsertCmd
 
-        outputPath = os.path.join('..', self.configManager.outputFolder)
+        outputPath = os.path.join(self.configManager.relative_path, self.configManager.outputFolder)
         self.fileName = 'Inserts' + self.timestamp + '.txt'
         path = os.path.join(outputPath, self.fileName)
 
@@ -75,15 +82,8 @@ class CsvReader:
     # output: A string's matrix created from the csv file
     # -----------------------------------------------------
     def openCsv(self):
-        extractor = CsvRetriever()
-        csvMatrix = extractor.csvFromTextAcquisition(self.sourcePath)
+        self.initialize()
+        csvMatrix = self.csvRetriever.csvFromTextAcquisition(self.sourcePath)
         self.outputFile.write(self.insertStatement + self.configManager.VALUES + '\n')
         logging.info('The matrix produced from the CSV has shape ' + str(np.shape(csvMatrix)))
         return csvMatrix
-
-
-reader = CsvReader()
-csvData = reader.openCsv()
-reader.queryCreation(csvData)
-
-

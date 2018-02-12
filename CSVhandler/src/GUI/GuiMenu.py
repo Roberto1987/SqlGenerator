@@ -1,7 +1,8 @@
 from tkinter import *
+from PIL import Image, ImageTk
 
-# Here, we are creating our class, Window, and inheriting from the Frame
-# class. Frame is a class from the tkinter module. (see Lib/tkinter/__init__)
+# inheriting from the Frame  class.
+# #Frame is a class from the tkinter module. (see Lib/tkinter/__init__)
 import os
 
 from src.main.ConfigManager import ConfigManager
@@ -18,9 +19,17 @@ class Window(Frame):
         self.master.config(menu=self.menu)
         self.csvRetriever = CsvRetriever()
         self.sourcePath = ''
+        self.globalRow = 2
 
         self.init_frame()
         self.init_window()
+
+    def createButton(self):
+        showHeader = Button(text='Show Header', command=self.displayHeader)
+        showFirstTenLines = Button(text='Show first 10 lines', command=lambda: self.displayNextNRow(10))
+
+        showHeader.grid(row=0, column=0)
+        showFirstTenLines.grid(row=0, column=1)
 
     # -----------------------------------------------------
     # Windows GUI definition
@@ -28,7 +37,7 @@ class Window(Frame):
     #        Add to 'file' cascading menu: 'Exit', with exit command
     #        Add to 'edit' cascading menu: 'Undo'
     #        Add to 'info' cascading menu: 'Info'
-    #------------------------------------------------------
+    # ------------------------------------------------------
     def init_frame(self):
         file = Menu(self.menu)
         edit = Menu(self.menu)
@@ -36,7 +45,7 @@ class Window(Frame):
 
         # add commands to file.
         file.add_command(label='Exit', command=self.client_exit)
-        file.add_command(label='View Header', command=self.displayfields)
+        file.add_command(label='View Header', command=self.displayHeader)
         edit.add_command(label="Undo")
         info.add_command(label='About')
 
@@ -44,17 +53,15 @@ class Window(Frame):
         self.menu.add_cascade(label='File', menu=file)
         self.menu.add_cascade(label='Edit', menu=edit)
         self.menu.add_cascade(label='Info', menu=info)
+        self.csvReaderInitializer()
 
     def init_window(self):
         self.master.title('SQL generator')
+        self.createButton()
 
-        # allowing the widget to take the full space of the root window
-        # self.pack(fill=BOTH, expand=1)
-
-        # self.displayfields()
-    #--------------------------------------------------------
+    # --------------------------------------------------------
     # Proper initialization of the reader object
-    #--------------------------------------------------------
+    # --------------------------------------------------------
     def csvReaderInitializer(self):
         configManager = ConfigManager()
         configManager.setRelativePath('../..')
@@ -67,22 +74,43 @@ class Window(Frame):
         )
         print(self.sourcePath)
 
-    #----------------------------------------------------------
-    # Displaying fields
-    #----------------------------------------------------------
-    def displayfields(self):
-        self.csvReaderInitializer()
+    def displayNextNRow(self, n):
+        for i in range(self.globalRow,n+self.globalRow):
+            self.displayRow(i)
+
+
+    # -----------------------------------------------------
+    # Display the csv's row 'n'
+    # -----------------------------------------------------
+    def displayRow(self, row):
+        linerow = self.csvRetriever.getCsvRow(row, self.sourcePath)
+        lenRow = len(linerow)
+        rowElems = []
+        for i in range(lenRow):
+            j = Label(text=linerow[i], justify='left', padx='5', font=('Helvetica', 10))
+            rowElems.append(j)
+
+        for i in range(lenRow):
+            rowElems[i].grid(row=self.globalRow, column=i)
+        self.globalRow += 1
+
+    # ----------------------------------------------------------
+    # Displaying headers
+    # ----------------------------------------------------------
+    def displayHeader(self):
         tableFields = self.csvRetriever.getHeaderValues(self.sourcePath)
         numberOfFields = len(tableFields)
         fieldLabels = []
-        # greyDot = PhotoImage('../../res/gdot.png')
+        img = PhotoImage(file='../../res/gdot.png').subsample(7, 7)
         for i in range(numberOfFields):
-            fieldLabels.append(Label(text=tableFields[i], justify='left', padx='5', font=('Helvetica', 10)))
+            l = Label(text=tableFields[i], image=img, justify='left', padx='5', font=('Helvetica', 10), compound=LEFT)
+            l.image = img.subsample
+            fieldLabels.append(l)
+
+        for i in range(numberOfFields):
+            fieldLabels[i].grid(row=1, column=i)
 
         print('fieldLabels size ' + str(len(fieldLabels)))
-
-        for i in range(numberOfFields):
-            fieldLabels[i].grid(row=0, column=i)
 
     @staticmethod
     def client_exit():
@@ -93,5 +121,6 @@ root = Tk()
 # size of the window
 root.geometry("600x300")
 root.pack_slaves()
+
 app = Window(root)
 root.mainloop()

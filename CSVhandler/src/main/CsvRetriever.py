@@ -10,13 +10,17 @@ class CsvRetriever:
     def __init__(self):
         print('')
 
+
     # --------------------------------------------------------------
     # Determinate the number of columns of the csv from the header
     # --------------------------------------------------------------
     def checkCsvHeader(self, path):
         logging.info("Checking CSV header")
 
-        header = self.getCsvRow(1, path=path)
+        csvFile = self.openCsv(path)
+        header = csvFile.readline()
+        csvFile.close()
+
         fields = header.split(',')
         if '' in fields:
             fields[fields.index('')] = 'EMPTY'
@@ -51,25 +55,28 @@ class CsvRetriever:
     def getHeaderValues(self, path):
         logging.info("Extracting CSV header")
 
-        header = self.getCsvRow(1, path)
-        fields = header.split(',')
+        header = self.getCsvRow(1,path)
+
+        return header
+
+    #-----------------------------------------------------
+    # Get the n row of the csv
+    #----------------------------------------------------
+    def getCsvRow(self, n, path):
+        logging.info("Extracting the row " + str(n))
+        csvFile = self.openCsv(path)
+        row=''
+        for i in range(0, n):
+            row = csvFile.readline()
+
+        csvFile.close()
+        fields = row.split(',')
 
         if '' in fields:
             fields[fields.index('')] = 'EMPTY'
         for i in range(0, len(fields)):
             fields[i] = fields[i].strip()
-
-        return fields
-
-    # -----------------------------------------------------
-    # Get the n row of the csv
-    # ----------------------------------------------------
-    def getCsvRow(self, n, path):
-        logging.info("Extracting the row " + str(n))
-        csvFile = self.openCsv(path)
-        for i in range(0, n):
-            row = csvFile.readline()
-        csvFile.close()
+        print(fields)
         return row
 
     # ------------------------------------------------------
