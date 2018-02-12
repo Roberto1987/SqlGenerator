@@ -1,10 +1,6 @@
-# ----FIXED CONSTANT
 import configparser
-import os
-
 import logging
-
-import self as self
+import os
 
 
 class ConfigManager:
@@ -57,5 +53,3 @@ class ConfigManager:
 
     def setRelativePath(self, relPath):
         self.relative_path = relPath
-       # print("changed relpath"+self.relative_path)
-       # print(relPath)

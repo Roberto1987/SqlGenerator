@@ -15,9 +15,8 @@ class CsvRetriever:
     # --------------------------------------------------------------
     def checkCsvHeader(self, path):
         logging.info("Checking CSV header")
-        csvFile = open(path, 'r', encoding='UTF-8-sig')
-        header = csvFile.readline()
-        csvFile.close()
+
+        header = self.getCsvRow(1, path=path)
         fields = header.split(',')
         if '' in fields:
             fields[fields.index('')] = 'EMPTY'
@@ -25,6 +24,7 @@ class CsvRetriever:
 
         logging.info("Header size: " + str(len(fields)))
         logging.info("Header: " + header)
+
         return len(fields)
 
     # ---------------------------------------------------------
@@ -45,17 +45,42 @@ class CsvRetriever:
 
         return X
 
-    def getHeaderValues(self,path):
+    # ---------------------------------------------------------
+    # Get the header of the CSV
+    # ---------------------------------------------------------
+    def getHeaderValues(self, path):
         logging.info("Extracting CSV header")
-        csvFile = open(path, 'r', encoding='UTF-8-sig')
-        header = csvFile.readline()
-        csvFile.close()
+
+        header = self.getCsvRow(1, path)
         fields = header.split(',')
 
         if '' in fields:
             fields[fields.index('')] = 'EMPTY'
-        for s in fields:
-            s = s.strip()
+        for i in range(0, len(fields)):
+            fields[i] = fields[i].strip()
+
         return fields
 
+    # -----------------------------------------------------
+    # Get the n row of the csv
+    # ----------------------------------------------------
+    def getCsvRow(self, n, path):
+        logging.info("Extracting the row " + str(n))
+        csvFile = self.openCsv(path)
+        for i in range(0, n):
+            row = csvFile.readline()
+        csvFile.close()
+        return row
 
+    # ------------------------------------------------------
+    # Managing the opening of the CSV file
+    # ------------------------------------------------------
+    def openCsv(self, path):
+        try:
+            csvFile = open(path, 'r', encoding='UTF-8-sig')
+        except IOError:
+            logging.error("File " + path + " not found")
+            print("File " + path + " not found")
+            sys.exit()
+
+        return csvFile
