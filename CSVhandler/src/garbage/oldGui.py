@@ -75,9 +75,8 @@ class Window(Frame):
         print(self.sourcePath)
 
     def displayNextNRow(self, n):
-        for i in range(self.globalRow,n+self.globalRow):
+        for i in range(self.globalRow, n + self.globalRow):
             self.displayRow(i)
-
 
     # -----------------------------------------------------
     # Display the csv's row 'n'

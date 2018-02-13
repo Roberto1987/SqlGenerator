@@ -28,7 +28,7 @@ class CsvReader:
         self.insertStatement = ''
         self.sourcePath = ''
         self.fileName = ''
-        self.outputFile = ''
+        self.outputFilePath = ''
         self.csvRetriever = CsvRetriever()
         logging.basicConfig(filename='queryCreator.log', level=logging.DEBUG)
         logging.info(self.delimitator + 'Process started in ' + str(self.humanTimestamp) + self.delimitator)
@@ -39,7 +39,7 @@ class CsvReader:
     def initialize(self):
         logging.info("\n --- Loading configs from .ini file --- \n")
 
-        #self.configManager.setRelativePath('..\..')
+        # self.configManager.setRelativePath('..\..')
         self.configManager.extractProperties()
 
         self.sourcePath = os.path.join(os.path.join(
@@ -52,12 +52,10 @@ class CsvReader:
 
         outputPath = os.path.join(self.configManager.relative_path, self.configManager.outputFolder)
         self.fileName = 'Inserts' + self.timestamp + '.txt'
-        path = os.path.join(outputPath, self.fileName)
+        self.outputFilePath = os.path.join(outputPath, self.fileName)
 
-        logging.info('Selected output directory:' + outputPath)
-        logging.info('Path of the written file path:' + path)
-
-        self.outputFile = open(path, 'w', encoding='utf-8')
+        logging.info('Selected output directory:' + self.outputFilePath)
+        logging.info('Path of the written file path:' + self.outputFilePath)
 
     # -------------------------------------------------------------------------------
     # input: string matrix 'data'
@@ -66,9 +64,12 @@ class CsvReader:
     # writing it on a file
     # -------------------------------------------------------------------------------
     def queryCreation(self, data):
+        outputFile = open(self.outputFilePath, 'w', encoding='utf-8')
+        outputFile.write(self.insertStatement + self.configManager.VALUES + '\n')
         i = 0
+        # Should be better to compose the string first.
         for i in range(0, data.shape[0]):
-            self.outputFile.write(
+            outputFile.write(
                 self.configManager.START_BRACKET + data[i, 1] + "," + self.configManager.loca_id + "," +
                 self.configManager.APEX + data[i, 6] + self.configManager.APEX + "," +
                 self.configManager.APEX + data[i, 3] + self.configManager.APEX +
@@ -84,6 +85,13 @@ class CsvReader:
     def openCsv(self):
         self.initialize()
         csvMatrix = self.csvRetriever.csvFromTextAcquisition(self.sourcePath)
-        self.outputFile.write(self.insertStatement + self.configManager.VALUES + '\n')
         logging.info('The matrix produced from the CSV has shape ' + str(np.shape(csvMatrix)))
         return csvMatrix
+
+    #------------------------------------------------------
+    # run the query writing
+    #------------------------------------------------------
+    def run(self):
+        csvData = self.openCsv()
+        self.queryCreation(csvData)
+

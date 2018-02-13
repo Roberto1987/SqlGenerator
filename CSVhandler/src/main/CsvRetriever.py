@@ -4,12 +4,7 @@ import logging
 import sys
 
 
-# noinspection PyMethodMayBeStatic
 class CsvRetriever:
-
-    def __init__(self):
-        print('')
-
 
     # --------------------------------------------------------------
     # Determinate the number of columns of the csv from the header
@@ -54,18 +49,16 @@ class CsvRetriever:
     # ---------------------------------------------------------
     def getHeaderValues(self, path):
         logging.info("Extracting CSV header")
-
-        header = self.getCsvRow(1,path)
-
+        header = self.getCsvRow(1, path)
         return header
 
-    #-----------------------------------------------------
+    # -----------------------------------------------------
     # Get the n row of the csv
-    #----------------------------------------------------
+    # ----------------------------------------------------
     def getCsvRow(self, n, path):
         logging.info("Extracting the row " + str(n))
         csvFile = self.openCsv(path)
-        row=''
+        row = ''
         for i in range(0, n):
             row = csvFile.readline()
 
@@ -77,12 +70,13 @@ class CsvRetriever:
         for i in range(0, len(fields)):
             fields[i] = fields[i].strip()
         print(fields)
-        return row
+        return fields
 
     # ------------------------------------------------------
     # Managing the opening of the CSV file
     # ------------------------------------------------------
-    def openCsv(self, path):
+    @staticmethod
+    def openCsv(path):
         try:
             csvFile = open(path, 'r', encoding='UTF-8-sig')
         except IOError:

@@ -21,18 +21,18 @@ class ConfigManager:
         self.resourceFolder = ''
         self.filename = ''
 
+    #------------------------------------------------
+    # Extracting the properties from the .ini file
+    #------------------------------------------------
     def extractProperties(self):
-        # ----loading props parser
-
         config = configparser.ConfigParser()
-        # ----building props path
+
         configPath = os.path.join(os.path.join(self.relative_path, self.SETTINGS_FOLDER), self.PROPERTIES_FILE_NAME)
         logging.info('Configuration path: ' + configPath)
 
-        # ----reading props
         config.read(configPath)
         print(configPath)
-        # ----extracting the properties
+
         self.query = config['QuerySettings']['query.insert']
         self.nameTable = config['QuerySettings']['query.nameTable']
         self.firstInsertCmd = config['QuerySettings']['query.insert.firstInsert']
@@ -51,5 +51,8 @@ class ConfigManager:
         logging.info("\t filename: " + self.filename)
         logging.info("------------------------------------------ ")
 
+    #----------------------------------------
+    # set the relative path
+    #----------------------------------------
     def setRelativePath(self, relPath):
         self.relative_path = relPath
