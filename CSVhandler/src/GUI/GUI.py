@@ -1,3 +1,4 @@
+import logging
 import subprocess
 from tkinter import *
 
@@ -120,11 +121,12 @@ class GUI(Frame):
 
     def runQuery(self):
         print(self.csvReader.insertStatement)
-        self.csvReader.insertStatement = self.queryInsert.get()
+        self.csvReader.setInsertStatement(self.queryInsert.get())
         print(self.csvReader.insertStatement)
         self.csvReader.run()
 
 
+logging.basicConfig(filename='queryCreator.log', level=logging.DEBUG)
 root = Tk()
 root.geometry("600x300")
 GUI(root)

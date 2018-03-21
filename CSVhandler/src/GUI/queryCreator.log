@@ -1,0 +1,38 @@
+INFO:root: =========================== Process started in Wed, 14 Feb 2018 09:48:56 +0000 =========================== 
+INFO:root:
+ --- Initialization ---
+INFO:root:
+ --- Loading configs from .ini file --- 
+
+INFO:root:Configuration path: ../..\settings\queryCreator.ini
+INFO:root: ---------- Exported properties ---------- 
+INFO:root:	 Query type: INSERT INTO
+INFO:root:	 Table name: translation_competitors
+INFO:root:	 First Insert code: (sport,loca_id,long_name,english_name)
+INFO:root:	 Localization code: 23
+INFO:root:	 Output folder: output
+INFO:root:	 Source folder: res
+INFO:root:	 filename: CsvFile2.csv
+INFO:root:------------------------------------------ 
+INFO:root:Selected output directory:../..\output\Inserts20180214094856.txt
+INFO:root:Path of the written file path:../..\output\Inserts20180214094856.txt
+INFO:root: =========================== Process started in Mon, 19 Mar 2018 12:40:31 +0000 =========================== 
+INFO:root:
+ --- Initialization ---
+INFO:root:
+ --- Loading configs from .ini file --- 
+
+INFO:root:Configuration path: ../..\settings\queryCreator.ini
+INFO:root: ---------- Exported properties ---------- 
+INFO:root:	 Query type: INSERT INTO
+INFO:root:	 Table name: translation_competitors
+INFO:root:	 First Insert code: (sport,loca_id,long_name,english_name)
+INFO:root:	 Localization code: 23
+INFO:root:	 Output folder: output
+INFO:root:	 Source folder: res
+INFO:root:	 filename: CsvFile2.csv
+INFO:root:------------------------------------------ 
+INFO:root:Selected output directory:../..\output\Inserts20180319124031.txt
+INFO:root:Path of the written file path:../..\output\Inserts20180319124031.txt
+INFO:root:Extracting CSV header
+INFO:root:Extracting the row 1

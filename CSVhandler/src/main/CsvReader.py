@@ -88,10 +88,12 @@ class CsvReader:
         logging.info('The matrix produced from the CSV has shape ' + str(np.shape(csvMatrix)))
         return csvMatrix
 
-    #------------------------------------------------------
+    # ------------------------------------------------------
     # run the query writing
-    #------------------------------------------------------
+    # ------------------------------------------------------
     def run(self):
         csvData = self.openCsv()
         self.queryCreation(csvData)
 
+    def setInsertStatement(self, newInsertStatement):
+        self.insertStatement = newInsertStatement
